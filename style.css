@@ -63,12 +63,12 @@ input {
     margin: 0.3rem;
 }
 
-input:invalid {
+input.error:invalid{
     border: 1.5px solid red;
 }
 
-input:valid  {
-    border: 1px solid green;
+input:focus {
+    box-shadow: 1px 3px 26px -4px rgb(137, 144, 19);
 }
 
 /* Esto hace que las label se mantengan arriba de los inputs */
