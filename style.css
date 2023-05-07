@@ -63,8 +63,12 @@ input {
     margin: 0.3rem;
 }
 
-.error {
-    
+input:invalid {
+    border: 1.5px solid red;
+}
+
+input:valid  {
+    border: 1px solid green;
 }
 
 /* Esto hace que las label se mantengan arriba de los inputs */
