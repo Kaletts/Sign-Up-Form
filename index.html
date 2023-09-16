@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up Forum</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="main1">
+        <div class="odin">
+            <img class="odinsrc" src="/images/odin-lined.png" alt="OdinLogo">
+            <h1 class="odinName">ODIN</h1>
+        </div>
+    </div>
+    <div class="main2">
+        <div class="header">
+            <p>This is not a real online service! You know you need something like this in your life to help you realize
+                your deepest dreams. Sign up <i>now</i> to get started.</p>
+            <p>You <i>know</i> you want to</p>
+        </div>
+        <div class="formdiv">
+            <h1>Let's do this!</h1>
+            <form action="#">
+                <div class="inputs">
+                    <label for="FirstName" name="First Name">First Name</label>
+                    <input type="text" id="FirstName" required>
+                </div>
+                <div class="inputs">
+                    <label for="LastName" title="Last Name">Last Name</label>
+                    <input type="text" id="LastName" required>
+                </div>
+                <div class="inputs">
+                    <label for="Email" title="Email">Email</label>
+                    <input type="email" id="Email" required>
+                </div>
+                <div class="inputs">
+                    <label for="PhoneNumber" title="Phone Number">Phone Number</label>
+                    <input type="tel" id="PhoneNumber" required>
+                </div>
+                <div class="inputs">
+                    <label for="Password" title="Password">Password</label>
+                    <input type="password" id="Password" minlength="8" maxlength="16" required>
+                </div>
+                <div class="inputs">
+                    <label for="PasswordConfirm" title="Confirm Password">Confirm Password</label>
+                    <input type="password" id="PasswordConfirm" minlength="8" maxlength="16" required>
+                </div>
+                <div class="inputs">
+                    <input id="createAccount" type="submit" value="Create Account">
+                </div>
+            </form>
+            <p>Already have an account? <a href="#">Log In</a></p>
+        </div>
+    </div>
+</body>
+
+<script>
+    /* Selecciono el boton del formulario */
+    const crearCuenta = document.getElementById('createAccount');
+    /* Selecciono todos los inputs en un nodo (no es lo mismo que un array) */
+    const inputs = document.getElementsByTagName('input');
+
+    /* Agrego un listener para cuando se pulse el "crearcuenta" 
+    y cambia la clase a error si esta vacio el campo de entrada*/
+    crearCuenta.addEventListener('click', function (event) {
+        for (let i = 0; i < inputs.length; i++) {
+            if (inputs[i].value === '') {
+                inputs[i].className = 'error';
+            }
+        }
+    })
+
+</script>
+
+</html>
